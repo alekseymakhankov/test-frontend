@@ -1,0 +1,40 @@
+@import "~/styles/index.scss";
+
+.dimmer {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background-color: $black-color;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 20;
+  visibility: hidden;
+  opacity: 0.6;
+
+  &.visible {
+    visibility: visible;
+  }
+
+  .loader {
+    width: 40px;
+    height: 40px;
+    background-image: url('https://api.iconify.design/whh:octoloaderone.svg?color=white');
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: center;
+    animation: rotating 1.5s ease infinite;
+    opacity: 0.6;
+  }
+}
+
+@keyframes rotating {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}

@@ -1,0 +1,9 @@
+@import '~/styles/index.scss';
+
+.landing-page-wrapper {
+  margin-top: 100px;
+
+  @include media-small-mobile {
+    margin: 70px 0px 0px 0px;
+  }
+}

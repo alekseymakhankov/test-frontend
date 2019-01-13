@@ -1,0 +1,55 @@
+{
+  "name": "test-frontend",
+  "version": "1.0.0",
+  "main": "src/index.tsx",
+  "scripts": {
+    "develop": "concurrently -r \"npm:type-check:watch\" \"npm:start\"",
+    "start": "parcel ./src/index.html -p 3000",
+    "build": "npm run type-check && parcel build ./src/index.html --public-url /",
+    "prettify": "prettier --write './src/**/*.{ts,tsx}'",
+    "cypress:open": "cypress open",
+    "type-check": "tsc --noEmit",
+    "type-check:watch": "tsc --noEmit --watch"
+  },
+  "husky": {
+    "hooks": {
+      "pre-commit": "npm run prettify"
+    }
+  },
+  "engines": {
+    "node": ">= 8.11.0",
+    "npm": ">= 6.0.0"
+  },
+  "dependencies": {
+    "@types/react-redux": "^6.0.11",
+    "@types/react-router": "^4.4.3",
+    "@types/react-router-dom": "^4.3.1",
+    "@types/redux-logger": "^3.0.6",
+    "react": "^16.7.0",
+    "react-dom": "^16.7.0",
+    "react-redux": "^6.0.0",
+    "react-router": "^4.3.1",
+    "react-router-dom": "^4.3.1",
+    "redux": "^4.0.1",
+    "redux-logger": "^3.0.6"
+  },
+  "devDependencies": {
+    "@types/jest": "^23.3.10",
+    "@types/react": "^16.7.18",
+    "@types/react-dom": "^16.0.11",
+    "babel-polyfill": "^6.26.0",
+    "concurrently": "^4.1.0",
+    "cypress": "^3.1.4",
+    "husky": "^1.2.1",
+    "parcel-bundler": "^1.11.0",
+    "prettier": "^1.15.3",
+    "react-test-renderer": "^16.7.0",
+    "react-testing-library": "^5.4.2",
+    "sass": "^1.15.2",
+    "tslint": "^5.12.0",
+    "tslint-config-airbnb": "^5.11.1",
+    "tslint-config-prettier": "^1.17.0",
+    "tslint-react": "^3.6.0",
+    "typescript": "^3.2.2"
+  }
+}

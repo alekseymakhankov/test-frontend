@@ -1,0 +1,114 @@
+@import '~/styles/index.scss';
+
+.profile-page-wrapper {
+  width: 100%;
+  min-height: calc(100vh - 70px);
+  height: auto;
+  margin: 100px 0;
+  display: flex;
+  justify-content: center;
+
+  @include media-small-mobile {
+    margin: 70px 0px 0px 0px;
+  }
+
+  .profile-wrapper {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    height: auto;
+    background-color: $white-color;
+    padding: 20px 0px;
+    box-shadow: 0px 0px 10px 1px rgba($black-color, 0.2);
+
+    .friends-title {
+      padding: 0px 20px;
+      font-size: 20px;
+      opacity: 0.6;
+      text-transform: uppercase;
+      text-align: center;
+      margin: 20px 0px 15px 0;
+    }
+
+    .friends-wrapper {
+      display: flex;
+      flex-wrap: wrap;
+      padding: 0px 20px;
+      margin-top: 20px;
+      width: 100%;
+
+      .item-wrapper {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+        max-width: 80px;
+        font-size: 80%;
+        line-height: 1.2;
+        padding: 5px 0px;
+        cursor: pointer;
+        transition: all 0.2s ease;
+
+        &:hover {
+          background-color: rgba($primary-color, 0.1);
+        }
+
+        .friend-avatar {
+          border-radius: 50%;
+          margin-bottom: 10px;
+          object-fit: cover;
+        }
+      }
+    }
+    .user-name {
+      font-size: 24px;
+      margin: 10px 0px;
+      text-align: center;
+      min-width: 250px;
+      width: 250px;
+      padding-bottom: 10px;
+      border-bottom: 3px solid $secondary-color;
+    }
+
+    .description-wrapper {
+      display: flex;
+      flex-direction: column;
+      justify-content: flex-start;
+      align-items: center;
+      flex-wrap: wrap;
+      width: 100%;
+
+      .avatar {
+        object-fit: cover;
+        border-radius: 50%;
+        margin: 20px 0px;
+      }
+
+      .description-content {
+        padding: 0px 10px;
+        width: 80%;
+        margin-bottom: 20px;
+        display: flex;
+        justify-content: space-between;
+        .description-item {
+          display: flex;
+          flex-direction: column;
+          justify-content: center;
+          align-items: center;
+
+          .name {
+            opacity: 0.6;
+            font-size: 80%;
+            text-transform: uppercase;
+            margin-bottom: 5px;
+          }
+          .value {
+            font-weight: bold;
+          }
+        }
+      }
+    }
+  }
+}

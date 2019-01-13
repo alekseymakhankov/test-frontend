@@ -1,0 +1,41 @@
+@import '~/styles/index.scss';
+
+.notification-bar-wrapper {
+  position: fixed;
+  top: 20px;
+  right: 20px;
+  width: 300px;
+  background-color: $dark-green;
+  visibility: hidden;
+  opacity: 0;
+  z-index: 20;
+  padding: 10px;
+  color: $white-color;
+  box-shadow: 0px 0px 10px 2px rgba($black-color, 0.5);
+  transition: all 0.2s ease;
+
+  &.visible {
+    visibility: visible;
+    opacity: 1;
+  }
+
+  &.error {
+    background-color: $secondary-color;
+  }
+
+  .title-wrapper {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 15px;
+
+    .close-icon {
+      background-image: url('https://api.iconify.design/ei:close.svg?color=white');
+      background-repeat: no-repeat;
+      background-size: contain;
+      width: 25px;
+      height: 25px;
+      cursor: pointer;
+    }
+  }
+}

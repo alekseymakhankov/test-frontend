@@ -1,0 +1,14 @@
+{
+  "compilerOptions": {
+    "target": "es5",
+    "module": "commonjs",
+    "strict": true,
+    "jsx": "react",
+    "baseUrl": ".",
+    "experimentalDecorators": true,
+    "lib": ["dom", "es2015"],
+    "paths": {
+      "~*": ["./src/*"]
+    }
+  }
+}

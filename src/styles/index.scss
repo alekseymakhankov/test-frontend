@@ -1,0 +1,15 @@
+@import './constants.scss';
+@import './mixins.scss';
+
+*,
+*:before,
+*:after {
+  box-sizing: border-box;
+}
+html, body {
+  margin: 0;
+}
+body {
+  @include default-font;
+  height: auto;
+}

@@ -1,0 +1,55 @@
+@import '~/styles/index.scss';
+
+.header-wrapper {
+  position: fixed;
+  top: 0;
+  background-color: $primary-color;
+  width: 100%;
+  height: 70px;
+  z-index: 10;
+  box-shadow: 0px 0px 10px 2px rgba(0, 0, 0, 0.8);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0px 20px;
+  transition: all 0.2s ease;
+  color: $primary-light;
+
+  &.small {
+    height: 50px;
+    background-color: rgba($primary-color, 0.9);
+  }
+
+  .title {
+    display: flex;
+    align-items: center;
+    color: $primary-light;
+    cursor: pointer;
+
+    .logo {
+      background-image: url('https://api.iconify.design/entypo:network.svg?color=white');
+      background-position: center;
+      background-size: contain;
+      background-repeat: no-repeat;
+      color: $primary-light;
+      margin-right: 10px;
+      width: 30px;
+      height: 30px;
+    }
+  }
+
+  .search-input {
+    background-color: transparent;
+    border: 1px solid $white-color;
+    color: $white-color;
+    height: 30px;
+    padding: 5px 10px;
+    outline: none;
+    font-size: 16px;
+    @include default-font;
+
+    &::placeholder {
+      color: rgba($white-color, 0.7);
+    }
+  }
+}

@@ -1,0 +1,49 @@
+@import '~/styles/index.scss';
+
+.grid-container {
+  display: flex;
+  justify-content: center;
+  width: 100%;
+
+  .grid-wrapper {
+    max-width: 800px;
+    width: 100%;
+    display: flex;
+    flex-wrap: nowrap;
+  
+    .grid-column {
+      display: flex;
+      flex-direction: column;
+      justify-content: flex-start;
+    }
+  
+    .grid-row {
+      width: 100%;
+      display: flex;
+      position: relative;
+
+      .card-description {
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        height: 0;
+        width: 100%;
+        background-color: rgba(0, 0, 0, 0.7);
+        color: $primary-light;
+        transition: all 0.2s ease;
+        cursor: pointer;
+        display: flex;
+        align-items: center;
+        visibility: hidden;
+      }
+      &:hover {
+        .card-description {
+          height: 50px;
+          padding: 15px;
+          visibility: visible;
+        }
+      }
+    }
+  }
+}
